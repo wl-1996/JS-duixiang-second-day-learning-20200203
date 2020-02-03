@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>instanceof运算符</title>
+</head>
+<body>
+<script>
+    //类，构造函数
+    function Dog() {
+
+    }
+
+    function Cat() {
+
+    }
+
+    Cat.prototype = new Dog() //继承，猫继承狗
+
+    let hellokitty = new Cat() //通过cat来实例一个
+    console.log(hellokitty.constructor) //Dog
+    console.log(hellokitty instanceof Cat) //true
+    console.log(hellokitty instanceof Dog) //true
+
+    //**********************
+    //数组，对象，正则表达式的类型都是对象
+    // let arr = []
+    // console.log(typeof arr)
+    //
+    // let obj = {}
+    // console.log(typeof obj)
+    //
+    // let obj2 = /ABC/g
+    // console.log(typeof obj2)
+
+</script>
+</body>
+</html>

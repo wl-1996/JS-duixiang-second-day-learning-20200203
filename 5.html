@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hasOwnProperty方法</title>
+</head>
+<body>
+<script>
+    let obj = {
+        a: 1,
+        b: 2,
+        c: 3
+    }
+    obj.__proto__ = {
+        d: 4
+    }
+
+    // console.log(obj.hasOwnProperty("a"))
+    // console.log(obj.hasOwnProperty("b"))
+    // console.log(obj.hasOwnProperty("c"))
+    // console.log(obj.hasOwnProperty("d"))
+
+    //遍历obj的key
+    for (let k in obj) {
+        obj.hasOwnProperty(k) && console.log(k)
+    }
+</script>
+</body>
+</html>

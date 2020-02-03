@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象打点验证法</title>
+</head>
+<body>
+
+<script>
+    let obj = {
+        a: 1,
+        b: 2,
+        c: 3
+    }
+    obj.__proto__ = {
+        d: 4
+    }
+
+    console.log(obj.m) //undefined
+    console.log(obj.a) //1
+    console.log(obj.b) //2
+    console.log(obj.c) //3
+    console.log(obj.d) //4
+</script>
+</body>
+</html>
